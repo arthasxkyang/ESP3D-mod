@@ -326,8 +326,7 @@ bool ESP3DCommands::has_param(ESP3DMessage *msg, uint start) {
   return strlen(get_clean_param(msg, start)) != 0;
 }
 
-void ESP3DCommands::execute_internal_command(int cmd, int cmd_params_pos,
-                                             ESP3DMessage *msg) {
+void ESP3DCommands::execute_internal_command(int cmd, int cmd_params_pos, ESP3DMessage *msg) {
   if (!msg) {
     esp3d_log_e("no msg for cmd %d", cmd);
     return;
